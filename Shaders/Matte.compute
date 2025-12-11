@@ -1,0 +1,27 @@
+#pragma kernel PostprocessMatte
+
+// Input
+StructuredBuffer<float> MatteBuffer;  // MODNet output (1, 1, H, W)
+uint2 InputSize;
+
+// Output
+RWTexture2D<float4> Output;
+
+[numthreads(8, 8, 1)]
+void PostprocessMatte(uint2 id : SV_DispatchThreadID)
+{
+    if (!all(id < InputSize)) return;
+
+    // MODNet outputs values in range [0, 1]
+    // Read from buffer with vertical flip (match Unity texture coordinates)
+    uint offset = (InputSize.y - 1 - id.y) * InputSize.x + id.x;
+    float matte = MatteBuffer[offset];
+
+    // Clamp to valid range [0, 1] for safety
+    matte = saturate(matte);
+
+    // Output to RenderTexture
+    // Store matte value in all channels for visualization
+    // Alpha channel contains the actual matte for compositing
+    Output[id] = float4(matte, matte, matte, matte);
+}

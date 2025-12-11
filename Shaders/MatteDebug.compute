@@ -1,0 +1,37 @@
+#pragma kernel PostprocessMatteDebug
+
+// Input
+StructuredBuffer<float> MatteBuffer;
+uint2 InputSize;
+
+// Output
+RWTexture2D<float4> Output;
+
+[numthreads(8, 8, 1)]
+void PostprocessMatteDebug(uint2 id : SV_DispatchThreadID)
+{
+    if (!all(id < InputSize)) return;
+
+    // Try different buffer reading patterns to debug
+
+    // Pattern 1: No vertical flip
+    uint offset1 = id.y * InputSize.x + id.x;
+
+    // Pattern 2: With vertical flip
+    uint offset2 = (InputSize.y - 1 - id.y) * InputSize.x + id.x;
+
+    // Pattern 3: NCHW format (channel first)
+    uint offset3 = id.y * InputSize.x + id.x;
+
+    float matte1 = MatteBuffer[offset1];
+    float matte2 = MatteBuffer[offset2];
+
+    // Use non-flipped version and clamp to [0,1] for safety
+    float matte = saturate(matte1);
+
+    // Visualize with some contrast boost to see if there's any data
+    float boosted = saturate(matte * 2.0);
+
+    // Output: R=raw, G=boosted, B=flipped, A=raw
+    Output[id] = float4(matte, boosted, saturate(matte2), matte);
+}
