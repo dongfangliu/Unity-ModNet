@@ -38,8 +38,7 @@
 ### MatteTexture display issues
 → See [Troubleshooting](./troubleshooting.md)
 
-### I want to see code examples
-→ Open [Samples~/WebCamDemo/Scripts/MODNetConfigExamples.cs](../Samples~/WebCamDemo/Scripts/MODNetConfigExamples.cs)
+
 
 ---
 

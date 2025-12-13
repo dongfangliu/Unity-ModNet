@@ -32,9 +32,6 @@
 ### MatteTexture 显示有问题
 → 查看 [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)
 
-### 我想看代码示例
-→ 打开 [Examples/MODNetConfigExamples.cs](./Examples/MODNetConfigExamples.cs)
-
 ---
 
 ## 📋 常见任务速查
