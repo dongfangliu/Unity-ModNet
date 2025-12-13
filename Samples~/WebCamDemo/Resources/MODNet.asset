@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 857fe6adb35853a4494119e105b87b1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 40ae587ea32607548afbe5bba445be2f, type: 3}
   m_Name: MODNet
   m_EditorClassIdentifier: Assembly-CSharp::MODNet.MODNetResourceSet
-  model: {fileID: 5022602860645237092, guid: 2a0edc1e444eea64dacd0229ef376a8d, type: 3}
+  model: {fileID: 5022602860645237092, guid: 9e25a47a02d0cf7409eb66b736e0e914, type: 3}
   referenceSize: 512
-  preprocess: {fileID: 7200000, guid: 24179440e0baa27409f5492d033becf6, type: 3}
-  matte: {fileID: 7200000, guid: 0bde7b8051e55ef4caee25d7597ee534, type: 3}
+  preprocess: {fileID: 7200000, guid: 548724c37344f1944965dca9c206b4eb, type: 3}
+  matte: {fileID: 7200000, guid: af7410735f26e1d44b8920cb17fb1416, type: 3}

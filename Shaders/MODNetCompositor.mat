@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MODNetCompsitor
-  m_Shader: {fileID: -6465566751694194690, guid: 1234935335e02894fae87d9ee4928982, type: 3}
+  m_Name: MODNetCompositor
+  m_Shader: {fileID: -6465566751694194690, guid: 55fd657a786b1cc428dcd4b83f6b1009, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
