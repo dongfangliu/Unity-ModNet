@@ -10,7 +10,12 @@ public sealed class MODNetCompositor : MonoBehaviour
 
     MODNetDetector _detector;
 
-    public Texture InputTexture { get; set; }
+    public Texture InputTexture
+    {
+        get => _previewUI.texture;
+        set => _previewUI.texture = value;
+    }
+
     public RawImage PreviewUI => _previewUI;
 
     public void SetThreshold(float value)
@@ -32,7 +37,6 @@ public sealed class MODNetCompositor : MonoBehaviour
         if (InputTexture != null)
         {
             _detector.ProcessImage(InputTexture);
-            _previewUI.materialForRendering.SetTexture("_Input", InputTexture);
             _previewUI.materialForRendering.SetTexture("_Mask", _detector.MatteTexture);
         }
         else
