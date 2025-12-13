@@ -1,0 +1,41 @@
+{
+  "name": "com.modnet.unity",
+  "displayName": "MODNet Background Removal",
+  "version": "1.0.0",
+  "unity": "6000.0",
+  "description": "Real-time portrait matting using MODNet neural network with Unity Sentis. High-quality background removal for Unity projects.\n\nMODNet 实时人像抠图系统，基于 Unity Sentis 的高质量背景移除解决方案。",
+  "keywords": [
+    "modnet",
+    "background-removal",
+    "matting",
+    "portrait",
+    "segmentation",
+    "sentis",
+    "neural-network",
+    "人像抠图",
+    "背景移除"
+  ],
+  "category": "Image Processing",
+  "dependencies": {
+    "com.unity.burst": "1.8.17",
+    "com.unity.collections": "2.4.0",
+    "com.unity.sentis": "2.3.0",
+    "jp.keijiro.klak.nnutils": "2.2.1"
+  },
+  "author": {
+    "name": "MODNet Unity Contributors",
+    "url": "https://github.com/your-username/unity-modnet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/unity-modnet.git"
+  },
+  "license": "MIT",
+  "samples": [
+    {
+      "displayName": "WebCam Demo",
+      "description": "Example scene showing real-time background removal using webcam input",
+      "path": "Samples~/WebCamDemo"
+    }
+  ]
+}

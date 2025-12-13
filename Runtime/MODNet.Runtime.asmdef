@@ -1,0 +1,25 @@
+{
+    "name": "MODNet.Runtime",
+    "rootNamespace": "MODNet",
+    "references": [
+        "Unity.InferenceEngine",
+        "Unity.Burst",
+        "Unity.Collections",
+        "Klak.NNUtils.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.sentis",
+            "expression": "2.0.0",
+            "define": "MODNET_SENTIS"
+        }
+    ],
+    "noEngineReferences": false
+}
