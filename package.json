@@ -19,16 +19,16 @@
   "dependencies": {
     "com.unity.burst": "1.8.17",
     "com.unity.collections": "2.4.0",
-    "com.unity.sentis": "2.3.0",
-    "jp.keijiro.klak.nnutils": "2.2.1"
+    "com.unity.ai.inference": "2.3.0",
+    "jp.keijiro.klak.nnutils": "3.0.1"
   },
   "author": {
     "name": "MODNet Unity Contributors",
-    "url": "https://github.com/your-username/unity-modnet"
+    "url": "https://github.com/dongfangliu/Unity-ModNet"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/unity-modnet.git"
+    "url": "https://github.com/dongfangliu/Unity-ModNet.git"
   },
   "license": "MIT",
   "samples": [
